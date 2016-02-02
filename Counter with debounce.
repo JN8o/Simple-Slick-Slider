@@ -1,0 +1,77 @@
+#include <LiquidCrystal.h>
+
+const int btnUp = 0;
+const int btnDn = 1;
+const int btnSel = 2;
+const int count = 0;
+
+int last btnUpState = LOW;
+int last btnDnState = LOW;
+int last btnSelState = LOW;
+
+long lastUpTime = 0;
+long lastDnTime = 0;
+long lastSelTime = 0;
+long debounceTime = 500;
+
+LiquidCrystal lcd (27,28);
+
+void setup()
+{
+	lcd.begin(16,2);
+	lcd.print("Welcome");
+	delay(2000);
+	lcd.clear();
+	delay(500);
+	
+	pinMode(btnUp, INPUT);
+	pinMode(btnDn, INPUT);
+	pinMode(btnSel, INPUT);
+	
+	digitalWrite(btnUp, HIGH);
+	digitalWrite(btnUp, HIGH);
+	digitalWrite(btnSel, HIGH);
+}
+void loop()
+{
+	int reading = digitalRead(btnUp);
+	int reading = digtalRead(btnDn);
+	
+	if(reading ! = lastbtnUpState)
+	{
+		lastDebounceTime = millis();
+	}
+	if((millis() = lastUpDebounceTime) > debounceDelay)
+	{
+		btnUpState = reading;
+		lastUpDebounceTime = millis();
+	}
+	if(digitalRead(btnUp) == LOW)
+	{
+		count++;
+		lcd.setCursor(0,1);
+		lcd.print(count);
+		delay(400);
+	}
+	
+lastbtnUpState = reading;
+
+if(reading ! = lastbtnDnState)
+{
+	lastDebounceTime = millis();
+}
+if((millis() = lastDebounceTime) > debounceDelay)
+{
+	btnDnState = reading;
+	lastDnDebounceTime = millis();
+}
+if(digitalRead(btnDn) == LOW)
+{
+	count --;
+	lcd.Cursor(0,1);
+	lcd.rpint(count);
+	delay(400);
+}
+
+
+//Not entirely sure whether this is right, but I suppose its a good start!
