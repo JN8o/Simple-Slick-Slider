@@ -19,9 +19,6 @@ In the future I would like to miniturize the electronics and hopefully end up us
 
 Electronics-wise im set, however i am relatively new to coding, so my C is quite bad. 
 
-
--------------------------------------------------------------------------------------------------------------------------------------
-
 The IO's for the project will be:
 Up = 0
 Down = 1
@@ -32,8 +29,7 @@ LS1+2 = 5 (Limit switches)
 LCD = SDA
 LCD = SCL
 Stepper = 9
-        = 10
---------------------------------------------------------------------------------------------------------------------------------------
+Steppe  = 10
 
 The basic menu system:
 Direction
