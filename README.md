@@ -1,6 +1,7 @@
 # Simple-Slick-Slider
 Motorised timelapss slider with display output and bluetooth control.
 
+##The hardware side.
 The first iteration will include:
 - Arduino Uno
 - Nema 17 stepper
@@ -20,17 +21,18 @@ In the future I would like to miniturize the electronics and hopefully end up us
 Electronics-wise im set, however i am relatively new to coding, so my C is quite bad. 
 
 The IO's for the project will be:
-Up = 0
-Down = 1
-Select = 2
-Start = 3
-Stop = 4
-LS1+2 = 5 (Limit switches)
-LCD = SDA
-LCD = SCL
-Stepper = 9
-Steppe  = 10
+- **Up**        = 0
+- **Down**      = 1
+- **Select**    = 2
+- **Start**     = 3
+- **Stop**      = 4
+- **LS1+2**     = 5 (Limit switches)
+- LCD       = SDA
+- LCD       = SCL
+- Stepper   = 9
+- Stepper   = 10
 
+##Software Side.
 The basic menu system:
 Direction
   -Left
